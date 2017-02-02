@@ -16,8 +16,12 @@ public class UIController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		HPSlider.value = player.getHP();
-		points.text = "Points: " + 100;
-		ammo.text = 160 +"/"+ 200;
+		HPSlider.value = player.getHP ();
+		points.text = "Points: " + player.playerResults.points;
+		if (player.shooter) {
+			ammo.text = player.shooter.bankSize - player.shooter.used + "/" + player.shooter.bankSize;
+		} else {
+			ammo.text = "No weapon!";
+		}
 	}
 }

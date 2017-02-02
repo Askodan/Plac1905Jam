@@ -21,7 +21,7 @@ public class HordeControler : MonoBehaviour {
 		members = new GameObject[minionNumber]; 
 
 		for (int i = 0; i < minionNumber; i++) {
-			GameObject Minion = Instantiate(minion[Random.Range(0,2)],Random.insideUnitSphere*3+transform.position,transform.rotation);
+			GameObject Minion = Instantiate(minion[Random.Range(0,minion.Length)],Random.insideUnitSphere*3+transform.position,transform.rotation);
 			members [i] = Minion;
 			Minion.transform.parent = this.transform;
 		}
