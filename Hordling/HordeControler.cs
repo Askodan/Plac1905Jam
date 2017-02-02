@@ -17,7 +17,7 @@ public class HordeControler : MonoBehaviour {
 			hordeWaypoints[i++]=child.gameObject;
 		}
 	}
-	bool check (int [] usedIndexes, int index)
+	/*bool check (int [] usedIndexes, int index)
 	{
 		bool ok=true;
 		for(int j=0;j<usedIndexes.Length;j++)
@@ -28,7 +28,7 @@ public class HordeControler : MonoBehaviour {
 			}
 		}
 		return ok;
-	}
+	}*/
 	void Update()
 	{
 		if(cnt<members.Length)
