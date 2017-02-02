@@ -23,6 +23,7 @@ public class HordeControler : MonoBehaviour {
 		for (int i = 0; i < minionNumber; i++) {
 			GameObject Minion = Instantiate(minion[Random.Range(0,2)],Random.insideUnitSphere*3+transform.position,transform.rotation);
 			members [i] = Minion;
+			Minion.transform.parent = this.transform;
 		}
 	}
 
@@ -63,7 +64,6 @@ public class HordeControler : MonoBehaviour {
 				}while(!check(usedIndexes,index));
 				usedIndexes[i]=index;
 			}*/
-			print (members [cnt]);
 			members[cnt].GetComponent<WaypointSystem>().waypoints=hordeWaypoints;
 			cnt++;
 		}
