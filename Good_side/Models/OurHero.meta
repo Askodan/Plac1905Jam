@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Good_side/Models/OurHero.meta
 guid: dffc57d0f81683a42947c9f1a7f33490
 folderAsset: yes
 timeCreated: 1486046193
+=======
+guid: 29b696a5ba46fd1418c2b1eeb6f3e785
+folderAsset: yes
+timeCreated: 1486046387
+>>>>>>> 2733e9f07b69782fc5fda29c11a818db07b60256:Good_side/Models/OurHero.meta
 licenseType: Free
 DefaultImporter:
   userData: 

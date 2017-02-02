@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Good_side/Models/Mostek.meta
 guid: 7a8bae62b258c24489af0c655e7ee231
 folderAsset: yes
 timeCreated: 1486046193
+=======
+guid: 743ec1ed1296836489f46b9f878edbc5
+folderAsset: yes
+timeCreated: 1486046387
+>>>>>>> 2733e9f07b69782fc5fda29c11a818db07b60256:Good_side/Models/Mostek.meta
 licenseType: Free
 DefaultImporter:
   userData: 

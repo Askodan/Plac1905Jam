@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Good_side/Models/Pistolet.meta
 guid: 6a2d4a1dc2ea9a04c8144580f40d491b
 folderAsset: yes
 timeCreated: 1486046193
+=======
+guid: bb50ead29b0a4054fa62dfd6dfaafe24
+folderAsset: yes
+timeCreated: 1486046387
+>>>>>>> 2733e9f07b69782fc5fda29c11a818db07b60256:Good_side/Models/Pistolet.meta
 licenseType: Free
 DefaultImporter:
   userData: 
