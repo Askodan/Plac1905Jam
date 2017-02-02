@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player_controller : MonoBehaviour {
 
+	public Animator animator;
 	public float speedForward = 16.0f;
 	public float speedBack = 8.0f;
 	public float speedSides = 8.0f;
@@ -41,7 +42,7 @@ public class Player_controller : MonoBehaviour {
 		CharacterController controller = GetComponent<CharacterController> ();
 		///keyboard
 		if (Input.GetKeyDown (KeyCode.R)) {reload();}
-		if (Input.GetKeyDown (KeyCode.F)) {dropWeapon();}
+		if (Input.GetKeyDown (KeyCode.F)) {pickWeapon();}
 		if (controller.isGrounded)
 			if (Input.GetKeyDown (KeyCode.Space)) {jump();}
 
@@ -54,6 +55,10 @@ public class Player_controller : MonoBehaviour {
 			currentYSpeed = maxYSpeed;
 
 		motion = Vector3.Normalize (new Vector3 (x, 0.0f, z));
+		if(motion.magnitude > 0)
+			animator.SetBool("Walking",true);
+		else
+			animator.SetBool("Walking",false);
 		if (z > 0)
 			motion.z *= speedForward;
 		else
@@ -101,15 +106,17 @@ public class Player_controller : MonoBehaviour {
 	{
 		//print("Reload");
 	}
-	void dropWeapon()
+	void pickWeapon()
 	{
 		//print("Drop");
+		animator.SetTrigger("Picking");
 	}
 	void jump ()
 	{	//print("jump");
 		if (canJump) {
-			currentYSpeed = 15.0f;	
+			currentYSpeed = 15.0f;
 			StartCoroutine (jumpTime ());
+			animator.SetTrigger("Jumping");
 		}
 	}
 	IEnumerator jumpTime()
