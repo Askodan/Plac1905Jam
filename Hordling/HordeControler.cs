@@ -8,6 +8,24 @@ public class HordeControler : MonoBehaviour {
 	public GameObject waypointParent;
 	public GameObject [] hordeWaypoints;
 	private int cnt = 0;
+	public int minionNumber;
+	public GameObject [] minion;
+
+	void Awake()
+	{
+		GenerateMinions ();
+	}
+
+	void GenerateMinions()
+	{
+		members = new GameObject[minionNumber]; 
+
+		for (int i = 0; i < minionNumber; i++) {
+			GameObject Minion = Instantiate(minion[Random.Range(0,2)],Random.insideUnitSphere*3+transform.position,transform.rotation);
+			members [i] = Minion;
+		}
+	}
+
 	// Use this for initialization
 	void Start () {
 		hordeWaypoints = new GameObject [waypointParent.transform.childCount];
@@ -45,6 +63,7 @@ public class HordeControler : MonoBehaviour {
 				}while(!check(usedIndexes,index));
 				usedIndexes[i]=index;
 			}*/
+			print (members [cnt]);
 			members[cnt].GetComponent<WaypointSystem>().waypoints=hordeWaypoints;
 			cnt++;
 		}
