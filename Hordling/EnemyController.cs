@@ -3,12 +3,17 @@ using System.Collections;
 
 public class EnemyController : MonoBehaviour {
 	//public GameObject [] player;
+	public HordeControler hc;
+
+	private Animator ani;
+
 	public WaypointSystem ws;
 	public UnityEngine.AI.NavMeshAgent nma;
 	public float range = 10, losingRange = 20;
 	public bool agsActive=false;
 	// Use this for initialization
 	void Start () {
+		ani = GetComponentInChildren<Animator> ();
 		ws = GetComponent<WaypointSystem> ();
 		nma = GetComponent<UnityEngine.AI.NavMeshAgent> ();
 		StartCoroutine(checkPlayerPos());
